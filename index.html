@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>stats</title>
+    <!-- bootstrap styles -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <!-- custom styles -->
+    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
+
+    <script src="libs/jquery-1.11.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="libs/ember-template-compiler-1.10.0.js"></script>
+    <script src="libs/ember-1.10.0.debug.js"></script>
+    <script src="libs/ember-handlebars-loader-0.0.2.js"></script>
+    <script src="libs/ember-data-1.0.0-beta.15.js"></script>
+    <script src="libs/localstorage-adapter-0.5.1.js"></script>
+
+    <script src="stats-keeper.js"></script>
+    <script src="store.js"></script>
+    <script src="router.js"></script>
+
+    <script src="routes/teamz.js"></script>
+    <script src="routes/team.js"></script>
+    <script src="routes/player.js"></script>
+
+    <script src="controllers/teamz.js"></script>
+    <script src="controllers/newPlayer.js"></script>
+    <script src="controllers/team.js"></script>
+    <script src="controllers/new-stat.js"></script>
+
+    <script src="models/stat.js"></script>
+    <script src="models/player.js"></script>
+    <script src="models/team.js"></script>
+
+    <script>
+    EmberHandlebarsLoader.loadTemplates(['application', 'teamz', 'team','newPlayer','player','new-stat'])
+    </script>
+
+  </head>
+  <body>
+
+  </body>
+</html>

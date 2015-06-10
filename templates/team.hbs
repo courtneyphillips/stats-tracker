@@ -1,0 +1,14 @@
+<h1>{{name}}</h1>
+
+
+<h3>Players</h3>
+
+{{#each player}}
+  <p>{{#link-to 'player' this.id}}{{playerName}}{{/link-to}}</p>
+{{/each}}
+
+
+<h1>{{#link-to 'newPlayer' this.id}} Add a Player: {{/link-to}}</h1>
+
+
+{{outlet}}

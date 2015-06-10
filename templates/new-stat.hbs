@@ -1,0 +1,14 @@
+<h1>Shots</h1>
+<form>
+  <div class="form-group">
+    <label for="attempt">Shot Attempt</label>
+    {{input id="attempt" class="form-control" value=attempt}}
+  </div>
+
+  <div class="form-group">
+    <label for="made">Shot Made</label>
+    {{input id="playerName" class="form-control" value=made}}
+  </div>
+
+  <button class="btn btn-primary" {{action "save"}}> Save Stat</button>
+</form>

@@ -1,0 +1,8 @@
+<h1>Add a Player:</h1>
+<form>
+  <div class="form-group">
+    <label for="playerName">Player Name</label>
+    {{input id="playerName" class="form-control" value=playerName}}
+  </div>
+  <button class="btn btn-primary" {{action "save"}}> Save Player</button>
+</form> 

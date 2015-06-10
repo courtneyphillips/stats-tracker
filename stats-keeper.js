@@ -1,0 +1,1 @@
+StatsKeeper = Ember.Application.create();

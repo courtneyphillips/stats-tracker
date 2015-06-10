@@ -1,0 +1,15 @@
+
+<h1>{{playerName}}</h1>
+
+
+{{#each stat}}
+  <p>{{attempt}}</p>
+  <p>{{made}}</p>
+{{/each}}
+
+<p>{{stat.shootingPercent}}
+
+<p>{{#link-to "new-stat" this.id}} Add A New Stat {{/link-to}}</p>
+
+
+{{outlet}}
