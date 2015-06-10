@@ -23,7 +23,7 @@ StatsKeeper.NewStatController = Ember.ObjectController.extend({
 
   }
 
-  // shootingPercent: function(){
-  //   return 3
-  // }.property()
+
+
+  //trying to use a computed property function
 });
