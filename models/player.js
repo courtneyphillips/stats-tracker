@@ -4,10 +4,10 @@ StatsKeeper.Player = DS.Model.extend({
     stat: DS.hasMany('stat', {async: true}),
     shootingPercentage: function() {
 
-
-    if (attempt !== undefined) {
-
       var stats = this.get('stat');
+
+    if (stats.filterBy("attempt") !== undefined) {
+
       var attempt = stats.filterBy("attempt");
       var made =  stats.filterBy('made');
 
@@ -16,7 +16,7 @@ StatsKeeper.Player = DS.Model.extend({
       } else {
       var percentage = made.length / attempt.length;
 
-      return percentage;
+      return (percentage * 100).toFixed(2) + "%";
 
       }
 
@@ -24,5 +24,5 @@ StatsKeeper.Player = DS.Model.extend({
       console.log("you suck");
     }
 
-    }.property("stats")
+    }.property("stat")
 });

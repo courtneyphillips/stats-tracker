@@ -21,6 +21,8 @@ StatsKeeper.NewStatController = Ember.ObjectController.extend({
 
     this.transitionTo('player', player.id);
 
+    return "made";
+
   }.observes('player'),
 
     missed: function() {
