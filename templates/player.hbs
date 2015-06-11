@@ -1,16 +1,24 @@
 
 <h1>{{playerName}}</h1>
+<div class="row">
+  <div class="col-md-6">
+    <div class="well well-lg">
+      {{#each stat}}
+        <p>{{attempt}}</p>
+        <p>{{made}}</p>
+      {{/each}}
+    </div>
+  </div>
+  <p>{{shootingPercentage}}</p>
+  <!-- trying to use a computed property function-->
+
+  <div class="col-md-6">
+    <div class="well well-lg">
+        <p>{{#link-to "new-stat" this.id}}<span class="btn btn-primary btn-block"> Add A New Stat</span> {{/link-to}}</p>
 
 
-{{#each stat}}
-  <p>{{attempt}}</p>
-  <p>{{made}}</p>
-{{/each}}
+          {{outlet}}
 
-<p>{{player.shootingPercent}}</p>
-<!-- trying to use a computed property function-->
-
-<p>{{#link-to "new-stat" this.id}} Add A New Stat {{/link-to}}</p>
-
-
-{{outlet}}
+        </div>
+      </div>
+</div>

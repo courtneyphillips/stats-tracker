@@ -1,14 +1,20 @@
 <h1>Shots</h1>
-<form>
-  <div class="form-group">
-    <label for="attempt">Shot Attempt</label>
-    {{input id="attempt" class="form-control" value=attempt}}
+
+  <!-- <div class="col-md-3">
+    <label for="shot">Made</label>
+    {{input type="radio" name="shot" id="value" class="form-control" value=made}}
   </div>
 
-  <div class="form-group">
+  <div class="col-md-3"><label>Missed</label>
+    {{input id="value" type="radio" name="shot" class="form-control" value=miss}}
+  </div> -->
+
+<button class="btn btn-success" {{action "made"}}>New Made Shot</button>
+<button class="btn btn-danger" {{action "missed"}}>New Missed Shot</button>
+
+
+
+  <!-- <div class="form-group">
     <label for="made">Shot Made</label>
     {{input id="playerName" class="form-control" value=made}}
-  </div>
-
-  <button class="btn btn-primary" {{action "save"}}> Save Stat</button>
-</form>
+  </div> -->

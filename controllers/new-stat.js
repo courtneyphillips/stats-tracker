@@ -1,29 +1,67 @@
 StatsKeeper.NewStatController = Ember.ObjectController.extend({
   needs: ['player'],
   actions: {
-    save: function() {
-      var newStat= this.store.createRecord('stat', {
-        attempt: this.get('attempt'),
-        made:this.get('made')
 
+    made: function() {
+
+      var newStat = this.store.createRecord('stat', {
+        attempt: 1,
+        made: true
       });
-
-    newStat.save();
+      newStat.save();
 
       var player = this.get("controllers.player.model");
 
       player.get("stat").pushObject(newStat);
+
+      this.transitionToRoute('player', player.id);
+
       player.save();
 
 
-    this.transitionToRoute('player', player.id);
-    this.set('attempt', '');
-    this.set('made','');
+    },
+
+    missed: function() {
+
+      var newStat = this.store.createRecord('stat', {
+        attempt: 1,
+        made: false
+      });
+
+      newStat.save();
+
+      var player = this.get("controllers.player.model");
+
+      player.get("stat").pushObject(newStat);
+
+      this.transitionToRoute('player', player.id);
+
+      player.save();
     }
 
+    // save: function() {
+    //
+    //   var
+    //
+    //   var newStat= this.store.createRecord('stat', {
+    //     attempt: 1
+    //     made:this.get('made')
+    //
+    //   });
+    //
+    // newStat.save();
+    //
+    //   var player = this.get("controllers.player.model");
+    //
+    //   player.get("stat").pushObject(newStat);
+    //   player.save();
+    //
+    //
+    //
+    // this.set('attempt', '');
+    // this.set('made','');
+    // }
+
   }
-
-
-
   //trying to use a computed property function
 });

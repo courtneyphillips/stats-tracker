@@ -1,9 +1,11 @@
 <div class="container">
   <nav class="nav navbar-default" role="navigation">
-    <ul class="nav navbar-nav">
-      <img src="http://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Portland_Trail_Blazers_1991-2002.svg/1280px-Portland_Trail_Blazers_1991-2002.svg.png">
+    <img src="http://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Portland_Trail_Blazers_1991-2002.svg/1280px-Portland_Trail_Blazers_1991-2002.svg.png">
+    <br>
+      <ul class="nav navbar-nav">
+        <li><h3>{{#link-to 'teamz'}}Home{{/link-to}}</h3></li>
+        <li><h3><a href="http://www.nba.com/blazers/stats">More Stats</a></h3></li>
 
-      <li><h1>{{#link-to 'teamz'}}Home{{/link-to}}</h1></li>
     </ul>
   </nav>
     {{outlet}}

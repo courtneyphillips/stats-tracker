@@ -1,0 +1,19 @@
+.nav img {
+  max-width: 650px;
+}
+
+.nav {
+  padding: 15px;
+}
+
+.nav li {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 5px;
+
+}
+
+.well {
+  margin: 20px;
+  padding: 20px;
+}
