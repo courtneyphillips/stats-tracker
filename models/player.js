@@ -17,5 +17,5 @@ StatsKeeper.Player = DS.Model.extend({
 
       }
 
-    }.property()
+    }.property('stat')
 });

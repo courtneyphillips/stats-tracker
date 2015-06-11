@@ -14,12 +14,13 @@ StatsKeeper.NewStatController = Ember.ObjectController.extend({
 
       player.get("stat").pushObject(newStat);
 
-      this.transitionToRoute('player', player.id);
+
 
       player.save();
 
+    this.transitionTo('player', player.id);
 
-    },
+  }.observes('player'),
 
     missed: function() {
 
@@ -34,9 +35,11 @@ StatsKeeper.NewStatController = Ember.ObjectController.extend({
 
       player.get("stat").pushObject(newStat);
 
-      this.transitionToRoute('player', player.id);
+      // this.transitionToRoute('player', player.id);
 
       player.save();
+      return this.transitionTo('player', player.id);
+
     }
 
     // save: function() {
