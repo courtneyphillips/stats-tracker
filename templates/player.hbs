@@ -5,8 +5,11 @@
     <div class="well well-lg">
       <ol>
       {{#each stat}}
-        
-        <li>{{made}}</li>
+        {{#if made}}
+          <li>Made</li>
+        {{else}}
+          <li> Miss</li>
+        {{/if}}
       {{/each}}
     </ol>
     </div>
