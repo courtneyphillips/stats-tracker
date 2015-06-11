@@ -3,10 +3,10 @@
 <div class="row">
   <div class="col-md-6">
     <div class="well well-lg">
-      <h3>Players</h3>
+      <h3>Players</h3><hr>
 
       {{#each player}}
-        <li>{{#link-to 'player' this.id}}{{playerName}}{{/link-to}}</li>
+        <li><h4>{{#link-to 'player' this.id}}{{playerName}}{{/link-to}}</h4></li>
       {{/each}}
     </div>
   </div>
